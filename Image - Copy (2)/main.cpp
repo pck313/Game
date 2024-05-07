@@ -88,35 +88,6 @@ void renderTexture(SDL_Texture *texture, int x, int y, SDL_Renderer* renderer)
 	dest.y = y - dest.h;
 	SDL_RenderCopy(renderer, texture, NULL, &dest);
 }
-class ScrollingSand {
-private:
-    SDL_Texture* texture;
-    int width;
-    int scrollingOffset;
-    SDL_Renderer* renderer;
-
-public:
-    ScrollingSand(SDL_Renderer* _renderer) : texture(nullptr), width(0), scrollingOffset(0), renderer(_renderer) {}
-
-    void setTexture(SDL_Texture* _texture) {
-        texture = _texture;
-        SDL_QueryTexture(texture, NULL, NULL, &width, NULL);
-    }
-
-    void scroll(int speed) {
-        scrollingOffset += speed;
-        if (scrollingOffset >= width) {
-            scrollingOffset = 0;
-        }
-    }
-
-    void render() {
-        renderTexture(texture, scrollingOffset, 860, renderer);
-        renderTexture(texture, scrollingOffset - width, 860, renderer);
-    }
-};
-
-
 int main(int argc, char *argv[])
 {
     const int width = 1540;
@@ -140,95 +111,7 @@ int main(int argc, char *argv[])
     renderTexture(cactus1, 500, 800, renderer);
 
     SDL_RenderPresent(renderer); //Hien thi ban ve len man hinh
-
-    // Vị trí ban đầu của Dino
-    int dinoX = 200;
-    int dinoY = 800;
-
-    // Biến để xác định hướng tịnh tiến của Dino (lên hoặc xuống)
-    bool moveUp = false;
-
-    // Vòng lặp chính
-    bool quit = false;
-    while (!quit) {
-        // Xử lý sự kiện
-        SDL_Event event;
-        while (SDL_PollEvent(&event)) {
-            if (event.type == SDL_QUIT) {
-                quit = true;
-            }
-            // Xử lý sự kiện nhấn phím hoặc chuột
-        if (event.type == SDL_KEYDOWN || event.type == SDL_MOUSEBUTTONDOWN) {
-            moveUp = true; // Khi phím hoặc chuột được nhấn, Dino nhảy lên
-        }
-        }
-
-        // Cập nhật vị trí của Dino
-        if (moveUp) {
-            dinoY -= 1; // Di chuyển lên
-            if (dinoY <= 600)
-            {
-                moveUp = false; // Đảo hướng khi đạt đến đỉnh cửa sổ
-            }
-
-        } else {
-            dinoY += 1; // Di chuyển xuống
-            if (dinoY >= 800)
-            {
-                dinoY = 800; // Đảo hướng khi đạt đến đáy cửa sổ
-            }
-        }
-
-        // Xóa màn hình
-        SDL_RenderClear(renderer);
-
-        // Vẽ background và các thành phần khác
-        SDL_RenderCopy(renderer, background, NULL, NULL);
-        renderTexture(sand, 0, 860, renderer);
-        renderTexture(dino, dinoX, dinoY, renderer);
-        renderTexture(cactus1, 500, 800, renderer);
-
-        // Hiển thị lên màn hình
-        SDL_RenderPresent(renderer);
-
-        // Tạm ngừng để không quá nhanh
-        SDL_Delay(0.85);
-    }
-    ScrollingSand sand(renderer);
-
-    // Vòng lặp chính
-    bool quitMain = false; // Thay đổi tên biến này thành quitMain
-    while (!quitMain) {
-        SDL_Event event;
-        while (SDL_PollEvent(&event)) {
-            if (event.type == SDL_QUIT) {
-                quitMain = true; // Sửa tên biến ở đây
-            }
-        }
-
-        // Di chuyển và vẽ sand
-        sand.scroll(1);
-        SDL_RenderClear(renderer);
-        SDL_RenderCopy(renderer, background, NULL, NULL);
-        sand.render();
-        renderTexture(dino, 200, dinoY, renderer);
-        renderTexture(cactus1, 500, 800, renderer);
-        SDL_RenderPresent(renderer);
-        SDL_Delay(10);
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
+	
     SDL_DestroyTexture(background); //Giai phong bo nho texture ko dung den
     background = NULL; //De phong truong hop dung nham con tro da giai phong
 
