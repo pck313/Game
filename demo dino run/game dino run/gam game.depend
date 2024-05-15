@@ -1,0 +1,39 @@
+# depslib dependency file v1.0
+1715747993 source:d:\game\game dino run\defs.cpp
+	"defs.h"
+
+1715107410 d:\game\game dino run\defs.h
+
+1715761620 source:d:\game\game dino run\dinojump.cpp
+	"dinojump.h"
+
+1715760566 d:\game\game dino run\dinojump.h
+	<SDL.h>
+	<SDL_image.h>
+	"graphics.h"
+	"defs.h"
+	<math.h>
+	<SDL_mixer.h>
+
+1715138378 d:\game\game dino run\graphics.h
+	<iostream>
+	<SDL.h>
+	<SDL_image.h>
+
+1715138378 source:d:\game\game dino run\graphics.cpp
+	"graphics.h"
+
+1715761331 source:d:\game\game dino run\main.cpp
+	<iostream>
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_mixer.h>
+	"graphics.h"
+	"defs.h"
+	"dinojump.h"
+	"slideimage.h"
+
+1715149056 d:\game\game dino run\slideimage.h
+
+1715149056 source:d:\game\game dino run\slideimage.cpp
+
