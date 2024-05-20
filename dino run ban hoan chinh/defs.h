@@ -19,4 +19,10 @@ extern SDL_Texture* cactus2;
 extern SDL_Texture* sand;
 extern SDL_Texture* gameover;
 
+extern SDL_Texture* backmenu;
+extern SDL_Texture* dinorunendless;
+extern SDL_Texture* play;
+extern SDL_Texture* maps;
+extern SDL_Texture* quit;
+
 #endif

@@ -1,8 +1,15 @@
 #include "gamescreen.h"
 
-
 int x = 100;
 int y = 800;
+int speed = 5;
+int shake = 0;
+int backsandSpeed = 1;
+
+bool jump = false;
+bool esc = false;
+bool ground = false;
+bool gameOver = false;
 
 int backsand1 = 0, backsand2 = 1918;
 int sand1 = 0, sand2 = 1918;
@@ -25,37 +32,38 @@ void displayGame()
 void checkCrash()
 {
     SDL_Event event;
-    bool esc = false;
-    bool gameOver = false;
-    while (!gameOver)
+    if ((x < cactusx1 && x + 200 > cactusx1 && y > 710) || (x < cactusx2 && x + 200 > cactusx2 && y > 710))
     {
-        while (SDL_PollEvent(&event))
+        renderTexture(gameover, 400, 650);
+        SDL_RenderPresent(renderer);
+        while (!gameOver)
         {
-            if (event.type == SDL_QUIT)
+            while (SDL_PollEvent(&event))
             {
+                if (event.type == SDL_QUIT)
+                {
                     esc = true;
                     gameOver = true;
-            }
-            else if (event.type == SDL_KEYDOWN || event.type == SDL_MOUSEBUTTONDOWN)
-            {
+                }
+                if (event.type == SDL_KEYDOWN || event.type == SDL_MOUSEBUTTONDOWN)
+                {
                     gameOver = true;
+                }
             }
+
         }
-        if ((x < cactusx1 && x + 200 > cactusx1 && y > 710) || (x < cactusx2 && x + 200 > cactusx2 && y > 710))
-        {
-            gameOver = true;
-        }
+        esc = true;
     }
 }
 
 void slideImage()
 {
-    int speed = 5;
-    int backsandSpeed = 1;
     sand1 -= speed;
     sand2 -= speed;
+
     backsand1 -= backsandSpeed;
     backsand2 -= backsandSpeed;
+
     cactusx1 -= speed;
     cactusx2 -= speed;
 
@@ -114,11 +122,6 @@ void earthQuake()
 
 void dinoJump()
 {
-    int shake = 0;
-    bool esc = false;
-    bool jump = false;
-    bool ground = false;
-
     SDL_Event event;
     while (SDL_PollEvent(&event))
     {
@@ -126,16 +129,15 @@ void dinoJump()
         {
             esc = true;
         }
-        if ((event.type == SDL_KEYDOWN || event.type == SDL_MOUSEBUTTONDOWN) && ground)
+        if (event.type == SDL_KEYDOWN || event.type == SDL_MOUSEBUTTONDOWN)
         {
             jump = true;
-            ground = false;
         }
     }
 
     if (jump)
     {
-        y -= 5; //toc do dino
+        y -= speed;
         if (y <= 550)
         {
             jump = false;
@@ -143,7 +145,7 @@ void dinoJump()
     }
     else if (y < 800)
     {
-        y += 5; //toc do dino
+        y += speed;
         if (y >= 800)
         {
             y = 800;
@@ -161,14 +163,13 @@ void dinoJump()
 
 void start()
 {
-    bool esc = false;
     while (!esc)
     {
         dinoJump();
         slideImage();
         checkCrash();
-        displayGame();
         SDL_RenderPresent(renderer);
+        displayGame();
         SDL_Delay(3);
     }
 }

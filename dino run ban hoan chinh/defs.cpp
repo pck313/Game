@@ -14,3 +14,10 @@ SDL_Texture* cactus1 = nullptr;
 SDL_Texture* cactus2 = nullptr;
 SDL_Texture* sand = nullptr;
 SDL_Texture* gameover = nullptr;
+
+SDL_Texture* backmenu = nullptr;
+SDL_Texture* dinorunendless = nullptr;
+SDL_Texture* play = nullptr;
+SDL_Texture* maps = nullptr;
+SDL_Texture* quit = nullptr;
+

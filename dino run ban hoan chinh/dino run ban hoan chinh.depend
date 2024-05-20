@@ -1,16 +1,17 @@
 # depslib dependency file v1.0
-1716211412 source:d:\game\dino run ban hoan chinh\defs.cpp
+1716231158 source:d:\game\dino run ban hoan chinh\defs.cpp
 	"defs.h"
 
-1716213133 d:\game\dino run ban hoan chinh\defs.h
+1716231158 d:\game\dino run ban hoan chinh\defs.h
 	<SDL.h>
 	<SDL_image.h>
 
-1716220626 source:d:\game\dino run ban hoan chinh\main.cpp
+1716231217 source:d:\game\dino run ban hoan chinh\gamescreen.cpp
+	"gamescreen.h"
+
+1716231217 d:\game\dino run ban hoan chinh\gamescreen.h
 	"defs.h"
 	"graphic.h"
-	"loadimage.h"
-	"gamescreen.h"
 
 1716212503 d:\game\dino run ban hoan chinh\graphic.h
 	"defs.h"
@@ -19,17 +20,23 @@
 1716212773 source:d:\game\dino run ban hoan chinh\graphic.cpp
 	"graphic.h"
 
-1716211911 source:d:\game\dino run ban hoan chinh\loadimage.cpp
+1716231455 source:d:\game\dino run ban hoan chinh\loadimage.cpp
 	"loadimage.h"
 
-1716213002 d:\game\dino run ban hoan chinh\loadimage.h
+1716231217 d:\game\dino run ban hoan chinh\loadimage.h
 	"graphic.h"
 	"defs.h"
 
-1716220435 d:\game\dino run ban hoan chinh\gamescreen.h
+1716231432 source:d:\game\dino run ban hoan chinh\main.cpp
 	"defs.h"
 	"graphic.h"
+	"loadimage.h"
+	"gamescreen.h"
 
-1716220678 source:d:\game\dino run ban hoan chinh\gamescreen.cpp
+1716231181 source:d:\game\dino run ban hoan chinh\menu.cpp
+	"menu.h"
+
+1716231258 d:\game\dino run ban hoan chinh\menu.h
+	"defs.h"
 	"gamescreen.h"
 
