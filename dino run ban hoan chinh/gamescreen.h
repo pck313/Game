@@ -3,6 +3,7 @@
 
 #include "defs.h"
 #include "graphic.h"
+#include "text.h"
 
 void start();
 

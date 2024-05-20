@@ -2,6 +2,7 @@
 
 int x = 100;
 int y = 800;
+int score = 0;
 int speed = 5;
 int shake = 0;
 int backsandSpeed = 1;
@@ -70,10 +71,12 @@ void slideImage()
     if (sand1 <= -1918)
     {
         sand1 = sand2 + 1918;
+        score += 100;
     }
     if (sand2 <= -1918)
     {
         sand2 = sand1 + 1918;
+        score += 100;
     }
 
     if (backsand1 <= -1918)
@@ -160,7 +163,6 @@ void dinoJump()
         shake--;
     }
 }
-
 void start()
 {
     while (!esc)
@@ -170,6 +172,7 @@ void start()
         checkCrash();
         SDL_RenderPresent(renderer);
         displayGame();
-        SDL_Delay(3);
+        displayScore(score);
+        SDL_Delay(2.5);
     }
 }

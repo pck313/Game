@@ -5,5 +5,7 @@
 #include "gamescreen.h"
 
 void displayMenu();
+void playButton();
+void moveToGame();
 
 #endif
