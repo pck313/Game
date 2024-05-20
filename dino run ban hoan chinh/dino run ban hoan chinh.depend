@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1716211412 source:d:\game\dino run ban hoan chinh\defs.cpp
+	"defs.h"
+
+1716210622 d:\game\dino run ban hoan chinh\defs.h
+	<SDL.h>
+	<SDL_image.h>
+
+1716210381 source:d:\game\dino run ban hoan chinh\main.cpp
+	"defs.h"
+	"graphic.h"
+
+1716210707 d:\game\dino run ban hoan chinh\graphic.h
+	"defs.h"
+	<iostream>
+
+1716210902 source:d:\game\dino run ban hoan chinh\graphic.cpp
+	"graphic.h"
+

@@ -1,0 +1,16 @@
+#include "defs.h"
+
+const int width = 1540;
+const int height = 850;
+const char* title = "DINO GAME";
+
+SDL_Window* window = nullptr;
+SDL_Renderer* renderer = nullptr;
+
+SDL_Texture* background = nullptr;
+SDL_Texture* backsand = nullptr;
+SDL_Texture* dino = nullptr;
+SDL_Texture* cactus1 = nullptr;
+SDL_Texture* cactus2 = nullptr;
+SDL_Texture* sand = nullptr;
+SDL_Texture* gameover = nullptr;
