@@ -18,10 +18,11 @@ SDL_Window* initSDL(int width, int height, const char* title)
     if (!window)
     {
         cout << "Tao cua so khong thanh cong. " <<endl;
+        IMG_Quit();
         SDL_Quit();
         return nullptr;
     }
-    return nullptr;
+    return window;
 }
 
 SDL_Renderer* createRenderer()
@@ -30,6 +31,7 @@ SDL_Renderer* createRenderer()
     if (!renderer)
     {
         cout << "Khong hien thi duoc anh. " <<endl;
+        return nullptr;
     }
     return renderer;
 }

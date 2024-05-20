@@ -32,6 +32,14 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="defs.cpp" />
+		<Unit filename="defs.h" />
+		<Unit filename="gamescreen.cpp" />
+		<Unit filename="gamescreen.h" />
+		<Unit filename="graphic.cpp" />
+		<Unit filename="graphic.h" />
+		<Unit filename="loadimage.cpp" />
+		<Unit filename="loadimage.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

@@ -6,7 +6,7 @@
 
 using namespace std;
 
-SDL_Window* initSDL(int width, int height, int title);
+SDL_Window* initSDL(int width, int height, const char* title);
 SDL_Renderer* createRenderer();
 SDL_Texture* loadTexture(char* filename);
 void renderTexture(SDL_Texture* texture, int x, int y);
