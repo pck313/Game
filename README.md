@@ -24,9 +24,11 @@ Sau khi bấm phím Play, màn hình game xuất hiện. Chỉ cần bấm chu�
 ![gamescreen](https://github.com/pck313/phamcongkhanhgame/blob/main/dino%20run%20ban%20hoan%20chinh/abcgamescreen.png)
 
 Game có chức năng hiển thị điểm số theo quãng đường đi được.
+
 ![score](https://github.com/pck313/phamcongkhanhgame/blob/main/dino%20run%20ban%20hoan%20chinh/abc.png)
 
 Khi chạm vào vật cản thì gameover.
+
 ![gameover](https://github.com/pck313/phamcongkhanhgame/blob/main/dino%20run%20ban%20hoan%20chinh/abcgameover.png)
 
 Sau đó nhấn chuột sẽ quay về màn hình menu.
