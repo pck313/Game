@@ -36,7 +36,8 @@ Sau đó nhấn chuột sẽ quay về màn hình menu.
 
 THAM KHẢO:
 
-Tài liệu của cô Trần Thị Minh Châu: https://docs.google.com/document/d/1FZ3jTqHxtyZznNWiJmmve0zYu_aSliUqLP2OsMcdehQ/edit#heading=h.mps3zstdeza2
+Tài liệu của cô Trần Thị Minh Châu:
+https://docs.google.com/document/d/1FZ3jTqHxtyZznNWiJmmve0zYu_aSliUqLP2OsMcdehQ/edit#heading=h.mps3zstdeza2
 
 Một số trang web hỗ trợ việc khắc phục lỗi khi code và tham khảo: 
 https://codelearn.io/
@@ -62,8 +63,11 @@ https://www.freepik.com/
 https://pngtree.com/
 
 Chỉnh sửa ảnh bằng các phần mềm thiết kế:
+
 Adobe Illustrator
+
 Adobe Photoshop
+
 Powerpoint
 
 Vì những lí do bên trên nên em đưa ra mức điểm tối thiểu là: >= 8.
