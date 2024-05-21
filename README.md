@@ -17,6 +17,7 @@ Khi bấm vào nút Play thì nút bấm chuyển sang màu đen một lúc và 
 Phím Map em dự định bổ sung thêm tính năng thay đổi phông cảnh.
 
 Phím Quit dùng để thoát game.
+
 ![quit](https://github.com/pck313/phamcongkhanhgame/blob/main/dino%20run%20ban%20hoan%20chinh/abcquit.png)
 
 Sau khi bấm phím Play, màn hình game xuất hiện. Chỉ cần bấm chuột hoặc bấm phím bất kì để làm con khủng long nhảy lên và nhảy xuống, chuyển động cũng nhanh dần theo thời gian.
