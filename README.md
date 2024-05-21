@@ -21,7 +21,9 @@ Phím Quit dùng để thoát game.
 ![quit](https://github.com/pck313/phamcongkhanhgame/blob/main/dino%20run%20ban%20hoan%20chinh/abcquit.png)
 
 Sau khi bấm phím Play, màn hình game xuất hiện. Các hình ảnh trong phông nền sẽ chạy qua màn hình.
-Chỉ cần bấm chuột hoặc bấm phím bất kì để làm con khủng long nhảy lên và nhảy xuống, chuyển động cũng nhanh dần theo thời gian.
+Chỉ cần bấm chuột hoặc bấm phím bất kì để làm con khủng long nhảy lên và nhảy xuống, chuyển động của bối cảnh cũng nhanh dần. 
+Khi khủng long chạm đất thì tạo ra tiếng động và xuất hiện hiệu ứng động đất.
+
 ![gamescreen](https://github.com/pck313/phamcongkhanhgame/blob/main/dino%20run%20ban%20hoan%20chinh/abcgamescreen.png)
 
 Game có chức năng hiển thị điểm số theo quãng đường đi được.
