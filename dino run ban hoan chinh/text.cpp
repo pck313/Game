@@ -31,11 +31,10 @@ SDL_Texture* renderText(const char* text, TTF_Font* font, SDL_Color color)
     return texture;
 }
 
-void displayScore(int score)
+void displayScore(int score) //Hien thi diem so len man hinh
 {
     TTF_Font* font = loadFont ("friz.otf", 60);
     SDL_Color color = {255, 255, 255, 255};
-
     string scoreText = "Score: " + to_string(score);
 
     SDL_Texture* mark = renderText(scoreText.c_str(), font, color);

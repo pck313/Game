@@ -21,3 +21,11 @@ SDL_Texture* play = nullptr;
 SDL_Texture* maps = nullptr;
 SDL_Texture* quit = nullptr;
 
+SDL_Texture* backplay = nullptr;
+SDL_Texture* backmap = nullptr;
+SDL_Texture* backquit = nullptr;
+
+Mix_Chunk* sound = nullptr;
+Mix_Chunk* rattle = nullptr;
+Mix_Chunk* wind = nullptr;
+Mix_Chunk* lofi = nullptr;

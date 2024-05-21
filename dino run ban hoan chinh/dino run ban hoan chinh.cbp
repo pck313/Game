@@ -41,6 +41,10 @@
 		<Unit filename="loadimage.cpp" />
 		<Unit filename="loadimage.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="menu.cpp" />
+		<Unit filename="menu.h" />
+		<Unit filename="text.cpp" />
+		<Unit filename="text.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

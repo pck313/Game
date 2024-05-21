@@ -3,7 +3,7 @@
 bool out = false;
 bool startGame = false;
 
-void displayMenu()
+void displayMenu() //Hien thi cac hinh anh cua menu
 {
     SDL_RenderCopy(renderer, backmenu, nullptr, nullptr);
     renderTexture(dinorunendless, 358, 245);
@@ -14,7 +14,7 @@ void displayMenu()
     SDL_RenderPresent(renderer);
 }
 
-void playButton()
+void playButton() //Bam nut play thi bat dau game
 {
     SDL_Event event;
     while (SDL_PollEvent(&event))
@@ -27,15 +27,24 @@ void playButton()
         {
             int x, y;
             SDL_GetMouseState(&x, &y);
-            if(x >= 600 && x <= 600 + 340 && y >= 430 - 168 && y <= 430)
+            if(x >= 580 && x <= 920 && y >= 332 && y <= 390) // Kiem tra con chuot co cham vao anh Play
             {
                 startGame = true;
+                start();
+            }
+            else if(x >= 580 && x <= 920 && y >= 490 && y <= 530) //Kiem tra co bam vao Quit
+            {
+                out = true;
+            }
+            else if(x >= 580 && x <= 920 && y >= 400 && y <= 480) //Kiem tra co bam vao Map
+            {
+                displayGame();
             }
         }
     }
 }
 
-void moveToGame()
+void moveToGame() //Chuyen toi man hinh choi game
 {
     while (!out)
     {

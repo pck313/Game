@@ -3,6 +3,7 @@
 
 #include <SDL.h>
 #include <SDL_image.h>
+#include <SDL_mixer.h>
 
 extern const int width;
 extern const int height;
@@ -25,4 +26,14 @@ extern SDL_Texture* play;
 extern SDL_Texture* maps;
 extern SDL_Texture* quit;
 
+extern SDL_Texture* blackplay;
+extern SDL_Texture* blackmaps;
+extern SDL_Texture* blackquit;
+
+extern Mix_Chunk* sound;
+extern Mix_Chunk* rattle;
+extern Mix_Chunk* wind;
+extern Mix_Chunk* lofi;
+
 #endif
+

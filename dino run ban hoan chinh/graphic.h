@@ -3,6 +3,8 @@
 
 #include "defs.h"
 #include <iostream>
+#include <SDL_mixer.h>
+#include <SDL_ttf.h>
 
 using namespace std;
 

@@ -55,7 +55,7 @@ void renderTexture(SDL_Texture* texture, int x, int y)
     SDL_RenderCopy(renderer, texture, nullptr, &dest);
 }
 
-void waiWindowClosed()
+void waiWindowClosed() //Doi khi man hinh tat thi dung man hinh
 {
     SDL_Event event;
     bool quit = false;
@@ -74,4 +74,6 @@ void quitSDL()
     SDL_DestroyWindow(window);
     IMG_Quit();
     SDL_Quit();
+    TTF_Quit();
+
 }

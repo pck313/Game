@@ -10,14 +10,14 @@ int backsandSpeed = 1;
 bool jump = false;
 bool esc = false;
 bool ground = false;
-bool gameOver = false;
 
 int backsand1 = 0, backsand2 = 1918;
 int sand1 = 0, sand2 = 1918;
 int cactusx1 = 3000, cactusx2 = 4500;
 
-void displayGame()
+void displayGame() //Hien thi cac hinh anh cua game
 {
+    SDL_RenderClear(renderer);
     SDL_RenderCopy(renderer, background, nullptr, nullptr);
     renderTexture(backsand, backsand1, 830);
     renderTexture(backsand, backsand2, 830);
@@ -26,48 +26,33 @@ void displayGame()
     renderTexture(cactus1, cactusx1, 800);
     renderTexture(cactus2, cactusx2, 800);
     renderTexture(dino, x, y);
-
     SDL_RenderPresent(renderer);
 }
 
-void checkCrash()
+void checkCrash() //Kiem tra va cham cua dino va cactus
 {
-    SDL_Event event;
     if ((x < cactusx1 && x + 200 > cactusx1 && y > 710) || (x < cactusx2 && x + 200 > cactusx2 && y > 710))
     {
+        Mix_FreeChunk(wind);
+        SDL_Event event;
         renderTexture(gameover, 400, 650);
         SDL_RenderPresent(renderer);
-        while (!gameOver)
+        bool gameOver = false;
+        while (!gameOver && SDL_WaitEvent(&event))
         {
-            while (SDL_PollEvent(&event))
+            if (event.type == SDL_QUIT || event.type == SDL_KEYDOWN || event.type == SDL_MOUSEBUTTONDOWN)
             {
-                if (event.type == SDL_QUIT)
-                {
-                    esc = true;
-                    gameOver = true;
-                }
-                if (event.type == SDL_KEYDOWN || event.type == SDL_MOUSEBUTTONDOWN)
-                {
-                    gameOver = true;
-                }
+                gameOver = true;
+                esc = true;
             }
-
         }
-        esc = true;
     }
 }
 
-void slideImage()
+void slideImage() //Tao chuyen dong cho boi canh
 {
     sand1 -= speed;
     sand2 -= speed;
-
-    backsand1 -= backsandSpeed;
-    backsand2 -= backsandSpeed;
-
-    cactusx1 -= speed;
-    cactusx2 -= speed;
-
     if (sand1 <= -1918)
     {
         sand1 = sand2 + 1918;
@@ -78,7 +63,8 @@ void slideImage()
         sand2 = sand1 + 1918;
         score += 100;
     }
-
+    backsand1 -= backsandSpeed;
+    backsand2 -= backsandSpeed;
     if (backsand1 <= -1918)
     {
         backsand1 = backsand2 + 1918;
@@ -88,23 +74,20 @@ void slideImage()
         backsand2 = backsand1 + 1918;
     }
 
+    cactusx1 -= speed;
     if (cactusx1 <= -100)
     {
         cactusx1 = 3000;
     }
+    cactusx2 -= speed;
     if (cactusx2 <= -100)
     {
-        cactusx2 = 1500;
+        cactusx2 = 1600;
     }
 
-    if (sand2 > 0 && sand2 % (1918 * 3) == 0)
-    {
-        speed += 1;
-        backsandSpeed += 1;
-    }
 }
 
-void earthQuake()
+void earthQuake() //Tao dong dat khi dino nhay xuong
 {
     SDL_Rect shakeBackground = {0, 0, 1540, 850};
     for (int i = 0; i < 5; i++)
@@ -123,7 +106,7 @@ void earthQuake()
     }
 }
 
-void dinoJump()
+void dinoJump() //Khung long nhay len va roi xuong
 {
     SDL_Event event;
     while (SDL_PollEvent(&event))
@@ -159,18 +142,19 @@ void dinoJump()
 
     if (ground && shake > 0)
     {
+        Mix_PlayChannel(-1, rattle, 0); //Tao am thanh khi dong dat
         earthQuake();
         shake--;
     }
 }
-void start()
+void start() //Chay game
 {
+    Mix_PlayChannel(-1, wind, -1);
     while (!esc)
     {
         dinoJump();
         slideImage();
         checkCrash();
-        SDL_RenderPresent(renderer);
         displayGame();
         displayScore(score);
         SDL_Delay(2.5);
