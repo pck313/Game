@@ -9,6 +9,7 @@ Dựa trên trò chơi Dino Run nổi tiếng của Google, game của em có b�
 CÁCH CHƠI GAME:
 
 Màn hình menu gồm có các nút: Play, Maps, Quit.
+Dòng chữ Endless Journey nghĩa là hành trình vô tận, ẩn dụ cho việc chạy liên tục cho đến khi over.
 ![menu](https://github.com/pck313/phamcongkhanhgame/blob/main/dino%20run%20ban%20hoan%20chinh/abcmenu.png)
 
 Khi bấm vào nút Play thì nút bấm chuyển sang màu đen một lúc và chuyển sang màn hình chơi game.
