@@ -29,15 +29,24 @@ void playButton() //Bam nut play thi bat dau game
             SDL_GetMouseState(&x, &y);
             if(x >= 580 && x <= 920 && y >= 332 && y <= 390) // Kiem tra con chuot co cham vao anh Play
             {
+                renderTexture(blackplay, 600, 430);
+                SDL_RenderPresent(renderer);
+                SDL_Delay(150);
                 startGame = true;
                 start();
             }
             else if(x >= 580 && x <= 920 && y >= 490 && y <= 530) //Kiem tra co bam vao Quit
             {
+                renderTexture(blackquit, 600, 585);
+                SDL_RenderPresent(renderer);
+                SDL_Delay(150);
                 out = true;
             }
             else if(x >= 580 && x <= 920 && y >= 400 && y <= 480) //Kiem tra co bam vao Map
             {
+                renderTexture(blackmap, 625, 508);
+                SDL_RenderPresent(renderer);
+                SDL_Delay(150);
                 displayGame();
             }
         }

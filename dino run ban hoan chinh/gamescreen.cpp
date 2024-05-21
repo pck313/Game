@@ -147,7 +147,7 @@ void dinoJump() //Khung long nhay len va roi xuong
         shake--;
     }
 }
-void start() //Chay game
+void start() //Chay man hinh game
 {
     Mix_PlayChannel(-1, wind, -1);
     while (!esc)

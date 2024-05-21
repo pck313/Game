@@ -7,6 +7,6 @@
 
 TTF_Font* loadFont(const char* path, int size);
 SDL_Texture* renderText(const char* text, TTF_Font* font, SDL_Color color);
-void displayScore(int score);
+void displayScore(int score); //Hien thi diem so len man hinh
 
 #endif

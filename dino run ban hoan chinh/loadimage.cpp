@@ -16,6 +16,10 @@ void loadImage() //Tai cac hinh anh cua menu va man hinh game
     maps = loadTexture("maps.png");
     quit = loadTexture("quit.png");
 
+    blackplay = loadTexture("blackplay.png");
+    blackmap = loadTexture("blackmap.png");
+    blackquit = loadTexture("blackquit.png");
+
 //Tai cac am thanh
     rattle = Mix_LoadWAV("rattle.mp3"); //am thanh dong dat
     wind = Mix_LoadWAV("wind.mp3");

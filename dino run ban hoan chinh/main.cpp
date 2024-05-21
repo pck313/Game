@@ -1,7 +1,5 @@
 #include "defs.h"
-#include "graphic.h"
 #include "loadimage.h"
-#include "gamescreen.h"
 #include "menu.h"
 
 int main(int argc, char* argv[])

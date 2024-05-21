@@ -4,8 +4,8 @@
 #include "defs.h"
 #include "gamescreen.h"
 
-void displayMenu();
-void playButton();
-void moveToGame();
+void displayMenu(); //Hien thi cac hinh anh cua menu
+void playButton(); //Bam nut button de choi game
+void moveToGame(); //Chuyen sang man hinh game roi choi game
 
 #endif

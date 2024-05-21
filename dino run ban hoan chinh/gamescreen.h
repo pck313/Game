@@ -6,8 +6,8 @@
 #include "text.h"
 #include <SDL_mixer.h>
 
-void displayGame();
-void start();
+void displayGame(); //Hien thi cac hinh anh cua man hinh game
+void start(); //Choi tren man hinh game
 
 #endif
 

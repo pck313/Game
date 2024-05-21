@@ -4,6 +4,6 @@
 #include "graphic.h"
 #include "defs.h"
 
-void loadImage();
+void loadImage(); //Tai tat ca cac hinh anh
 
 #endif

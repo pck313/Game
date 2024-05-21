@@ -27,7 +27,7 @@ extern SDL_Texture* maps;
 extern SDL_Texture* quit;
 
 extern SDL_Texture* blackplay;
-extern SDL_Texture* blackmaps;
+extern SDL_Texture* blackmap;
 extern SDL_Texture* blackquit;
 
 extern Mix_Chunk* sound;
