@@ -72,5 +72,5 @@ Adobe Photoshop
 
 Powerpoint
 
-Tuy nhiên, các chương trình game chưa thực sự tối ưu nên có thể sẽ xuất hiện một số lỗi khi chơi trên một số máy khác.
+Tuy nhiên, các chương trình game chưa thực sự tối ưu nên có thể sẽ xuất hiện một số lỗi khi chơi trên máy khác.
 Vì những lí do bên trên nên em đưa ra mức điểm tối thiểu là: >= 8.
